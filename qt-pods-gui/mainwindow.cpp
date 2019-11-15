@@ -121,6 +121,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::stdOutActivated(int fileDescriptor) {
+#ifdef Q_OS_UNIX
     char readBuffer[1024];
     int numberOfBytesRead = ::read(fileDescriptor, readBuffer, sizeof(readBuffer) - 1);
     if(numberOfBytesRead > 0) {
@@ -133,6 +134,7 @@ void MainWindow::stdOutActivated(int fileDescriptor) {
         statusBar()->showMessage(readBuffer);
 #endif
     }
+#endif
 }
 
 void MainWindow::updateBuildInfo() {
@@ -366,7 +368,7 @@ void MainWindow::on_pushButtonManageSources_clicked() {
 
     // At least add one source
     if(sources.isEmpty()) {
-        sources << "http://qt-pods.org/pods.json";
+        sources << "https://raw.githubusercontent.com/qt-pods/qt-pods-master/master/pods.json";
     }
     sourcesDialog.setSources(sources);
 
@@ -710,7 +712,7 @@ void MainWindow::refreshAvailablePods() {
 
     QStringList sources = _settings->value("sources").toStringList();
     if(sources.isEmpty()) {
-        sources << "http://qt-pods.org/pods.json";
+        sources << "https://raw.githubusercontent.com/qt-pods/qt-pods-master/master/pods.json";
     }
 
     metaObject()->invokeMethod(_podManager, "listAvailablePods", Q_ARG(QStringList, sources));

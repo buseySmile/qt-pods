@@ -1,15 +1,12 @@
-[![Qt Pods](http://qt-pods.org/assets/logo.png "Qt Pods")](http://qt-pods.org)    
-[![Build status](https://travis-ci.org/buzzySmile/qt-pods.svg?branch=master)](https://travis-ci.org/buzzySmile/qt-pods)   
+[![Build status](https://travis-ci.org/qt-pods/qt-pods.svg?branch=master)](https://travis-ci.org/qt-pods/qt-pods)   
 [![Gitter](https://badges.gitter.im/NLP/gitter.svg)](https://gitter.im/qt-pods)
 
-Support this and other free software projects of mine by donating bitcoins:
-```cpp
-1Hk5EkcZRaio4uGXSU453E1bNFTecsZEpt
-```
 
-## qt-pods ([http://www.qt-pods.org](http://www.qt-pods.org))
+## qt-pods
 
-![Screenshot](https://github.com/cybercatalyst/qt-pods/blob/master/screenshot.png "Screenshot")
+See the video that demonstrates how easy it is to embed foreign code and write a complete code with auxiliary functions in less than five minutes.
+
+[![Example video](https://img.youtube.com/vi/P-gA5g9ZP9I/0.jpg)](https://www.youtube.com/watch?v=P-gA5g9ZP9I)
 
 qt-pods is an attempt to unify the packaging of fragments of Qt sources.
 Inspired by the cocoapods project, each "pod" follows a strict rule of how
@@ -26,14 +23,10 @@ it with other developers.
 qtpods-dev@googlegroups.com
 ```
 
-## Prebuild preview
-* Ubuntu 14.04: http://qt-pods.org/downloads/qt-pods-gui_0.1-ubuntu_amd64.deb
-* MacOSX Yosemite: http://qt-pods.org/downloads/qtpods-macosx-76d1de6-release.zip
-
 ## How to build
 Clone repository recursively:
 ```
-git clone --recursive https://github.com/cybercatalyst/qt-pods.git
+git clone --recursive git@github.com:qt-pods/qt-pods.git
 ```
 Then run:
 ```
@@ -97,4 +90,3 @@ Please be careful. This software is in early state, use it with caution. Make ba
 ## Ideas, improvements?
 
 Let me know at jacob@qt-pods.org.
-
